@@ -9,8 +9,13 @@
 import UIKit
 import CoreData
 
-class ArtistsViewController: UIViewController {
+class ArtistsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    var context : NSManagedObjectContext!
+    var artists = [Artist]()
+
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,17 +28,31 @@ class ArtistsViewController: UIViewController {
     
 
     @IBAction func addArtistButton(sender: UIBarButtonItem) {
-        
+        self.performSegueWithIdentifier("ToAddArtist", sender: self)
+    }
+
+    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+        return self.artists.count
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+        let cell = tableView.dequeueReusableCellWithIdentifier("ArtistCell", forIndexPath: indexPath) as UITableViewCell
+        
+        var artist = self.artists[indexPath.row]
+        cell.textLabel.text = artist.firstName + " " + artist.lastName
+        
+        return cell
     }
-    */
+
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        if segue.identifier == "ToAddArtist" {
+            let addLabelVC = segue.destinationViewController as AddArtistViewController
+            //            addLabelVC.delegate = self
+        } else if segue.identifier == "ToSongs" {
+            let artistsVC = segue.destinationViewController as SongsViewController
+        }
+    }
 
 }
