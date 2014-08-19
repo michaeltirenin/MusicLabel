@@ -9,10 +9,18 @@
 /* Begin PBXBuildFile section */
 		F28CE16319A3F6C4000C717F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28CE16219A3F6C4000C717F /* AppDelegate.swift */; };
 		F28CE16619A3F6C4000C717F /* MusicLabel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F28CE16419A3F6C4000C717F /* MusicLabel.xcdatamodeld */; };
-		F28CE16819A3F6C4000C717F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28CE16719A3F6C4000C717F /* ViewController.swift */; };
+		F28CE16819A3F6C4000C717F /* LabelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28CE16719A3F6C4000C717F /* LabelsViewController.swift */; };
 		F28CE16B19A3F6C4000C717F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28CE16919A3F6C4000C717F /* Main.storyboard */; };
 		F28CE16D19A3F6C4000C717F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F28CE16C19A3F6C4000C717F /* Images.xcassets */; };
 		F28CE17919A3F6C4000C717F /* MusicLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28CE17819A3F6C4000C717F /* MusicLabelTests.swift */; };
+		F28CE18419A3FAB8000C717F /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28CE18319A3FAB8000C717F /* Song.swift */; };
+		F28CE18619A3FAB9000C717F /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28CE18519A3FAB9000C717F /* Artist.swift */; };
+		F28CE18819A3FAB9000C717F /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28CE18719A3FAB9000C717F /* Label.swift */; };
+		F2A9EF8719A3FCFE009736C0 /* AddLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A9EF8619A3FCFE009736C0 /* AddLabelViewController.swift */; };
+		F2A9EF8919A3FD0C009736C0 /* ArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A9EF8819A3FD0C009736C0 /* ArtistsViewController.swift */; };
+		F2A9EF8B19A3FD1F009736C0 /* AddArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A9EF8A19A3FD1F009736C0 /* AddArtistViewController.swift */; };
+		F2A9EF8D19A40811009736C0 /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A9EF8C19A40811009736C0 /* SongsViewController.swift */; };
+		F2A9EF8F19A40823009736C0 /* AddSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A9EF8E19A40823009736C0 /* AddSongViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,12 +38,21 @@
 		F28CE16119A3F6C4000C717F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F28CE16219A3F6C4000C717F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F28CE16519A3F6C4000C717F /* MusicLabel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MusicLabel.xcdatamodel; sourceTree = "<group>"; };
-		F28CE16719A3F6C4000C717F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F28CE16719A3F6C4000C717F /* LabelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsViewController.swift; sourceTree = "<group>"; };
 		F28CE16A19A3F6C4000C717F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F28CE16C19A3F6C4000C717F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F28CE17219A3F6C4000C717F /* MusicLabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicLabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28CE17719A3F6C4000C717F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F28CE17819A3F6C4000C717F /* MusicLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicLabelTests.swift; sourceTree = "<group>"; };
+		F28CE18219A3FAB7000C717F /* MusicLabel-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicLabel-Bridging-Header.h"; sourceTree = "<group>"; };
+		F28CE18319A3FAB8000C717F /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		F28CE18519A3FAB9000C717F /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		F28CE18719A3FAB9000C717F /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		F2A9EF8619A3FCFE009736C0 /* AddLabelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLabelViewController.swift; sourceTree = "<group>"; };
+		F2A9EF8819A3FD0C009736C0 /* ArtistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistsViewController.swift; sourceTree = "<group>"; };
+		F2A9EF8A19A3FD1F009736C0 /* AddArtistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddArtistViewController.swift; sourceTree = "<group>"; };
+		F2A9EF8C19A40811009736C0 /* SongsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
+		F2A9EF8E19A40823009736C0 /* AddSongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSongViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +94,20 @@
 		F28CE15F19A3F6C4000C717F /* MusicLabel */ = {
 			isa = PBXGroup;
 			children = (
+				F28CE18919A3FBB6000C717F /* Models */,
+				F28CE18A19A3FBBC000C717F /* Views */,
+				F28CE18B19A3FBC2000C717F /* Controllers */,
 				F28CE16219A3F6C4000C717F /* AppDelegate.swift */,
-				F28CE16719A3F6C4000C717F /* ViewController.swift */,
-				F28CE16919A3F6C4000C717F /* Main.storyboard */,
+				F28CE16719A3F6C4000C717F /* LabelsViewController.swift */,
+				F2A9EF8619A3FCFE009736C0 /* AddLabelViewController.swift */,
+				F2A9EF8819A3FD0C009736C0 /* ArtistsViewController.swift */,
+				F2A9EF8A19A3FD1F009736C0 /* AddArtistViewController.swift */,
+				F2A9EF8C19A40811009736C0 /* SongsViewController.swift */,
+				F2A9EF8E19A40823009736C0 /* AddSongViewController.swift */,
 				F28CE16C19A3F6C4000C717F /* Images.xcassets */,
 				F28CE16419A3F6C4000C717F /* MusicLabel.xcdatamodeld */,
 				F28CE16019A3F6C4000C717F /* Supporting Files */,
+				F28CE18219A3FAB7000C717F /* MusicLabel-Bridging-Header.h */,
 			);
 			path = MusicLabel;
 			sourceTree = "<group>";
@@ -110,6 +135,31 @@
 				F28CE17719A3F6C4000C717F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F28CE18919A3FBB6000C717F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F28CE18719A3FAB9000C717F /* Label.swift */,
+				F28CE18519A3FAB9000C717F /* Artist.swift */,
+				F28CE18319A3FAB8000C717F /* Song.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F28CE18A19A3FBBC000C717F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F28CE16919A3F6C4000C717F /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F28CE18B19A3FBC2000C717F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,8 +261,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F28CE16819A3F6C4000C717F /* ViewController.swift in Sources */,
+				F2A9EF8719A3FCFE009736C0 /* AddLabelViewController.swift in Sources */,
+				F2A9EF8F19A40823009736C0 /* AddSongViewController.swift in Sources */,
+				F28CE18419A3FAB8000C717F /* Song.swift in Sources */,
+				F2A9EF8B19A3FD1F009736C0 /* AddArtistViewController.swift in Sources */,
+				F28CE16819A3F6C4000C717F /* LabelsViewController.swift in Sources */,
+				F2A9EF8919A3FD0C009736C0 /* ArtistsViewController.swift in Sources */,
+				F28CE18819A3FAB9000C717F /* Label.swift in Sources */,
 				F28CE16619A3F6C4000C717F /* MusicLabel.xcdatamodeld in Sources */,
+				F2A9EF8D19A40811009736C0 /* SongsViewController.swift in Sources */,
+				F28CE18619A3FAB9000C717F /* Artist.swift in Sources */,
 				F28CE16319A3F6C4000C717F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,9 +389,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MusicLabel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicLabel/MusicLabel-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -342,9 +403,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MusicLabel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicLabel/MusicLabel-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -401,6 +464,7 @@
 				F28CE17E19A3F6C4000C717F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F28CE17F19A3F6C4000C717F /* Build configuration list for PBXNativeTarget "MusicLabelTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +473,7 @@
 				F28CE18119A3F6C4000C717F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
