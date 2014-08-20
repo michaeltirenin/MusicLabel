@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ArtistsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ArtistsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AddArtistDelegate {
 
     var artists = [Artist]()
     var selectedLabel : Label?
@@ -22,7 +22,6 @@ class ArtistsViewController: UIViewController, UITableViewDataSource, UITableVie
         self.navigationItem.title = "Recording Artists"
         
         self.artists = self.selectedLabel!.artists.allObjects as [Artist]
-        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,10 +52,16 @@ class ArtistsViewController: UIViewController, UITableViewDataSource, UITableVie
         if segue.identifier == "ToAddArtist" {
             let addArtistVC = segue.destinationViewController as AddArtistViewController
             addArtistVC.selectedLabel = selectedLabel
+            addArtistVC.delegate = self
         } else if segue.identifier == "ToSongs" {
             let artistsVC = segue.destinationViewController as SongsViewController
             artistsVC.selectedArtist = self.artists[self.tableView.indexPathForSelectedRow().row]
 
         }
+    }
+    
+    func artistAdded() {
+        self.artists = self.selectedLabel!.artists.allObjects as [Artist]
+        self.tableView.reloadData()
     }
 }

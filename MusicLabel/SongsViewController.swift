@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class SongsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SongsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AddSongDelegate {
 
     var songs = [Song]()
     var selectedArtist : Artist?
@@ -23,12 +23,8 @@ class SongsViewController: UIViewController, UITableViewDataSource, UITableViewD
 
         // tableview
         self.songs = self.selectedArtist!.songs.allObjects as [Song]
-        self.tableView.reloadData()
     }
     
-    override func viewDidDisappear(animated: Bool) {
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -56,6 +52,12 @@ class SongsViewController: UIViewController, UITableViewDataSource, UITableViewD
         if segue.identifier == "ToAddSong" {
             let addSongVC = segue.destinationViewController as AddSongViewController
             addSongVC.selectedArtist = selectedArtist
+            addSongVC.delegate = self
         }
+    }
+    
+    func songAdded() {
+        self.songs = self.selectedArtist!.songs.allObjects as [Song]
+        self.tableView.reloadData()
     }
 }

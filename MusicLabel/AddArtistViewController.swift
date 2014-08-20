@@ -9,13 +9,18 @@
 import UIKit
 import CoreData
 
+protocol AddArtistDelegate {
+    func artistAdded()
+}
+
 class AddArtistViewController: UIViewController, UITextFieldDelegate {
 
-    var context : NSManagedObjectContext!
     var selectedLabel : Label?
 
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
+    
+    var delegate : AddArtistDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +48,7 @@ class AddArtistViewController: UIViewController, UITextFieldDelegate {
         if error != nil {
             println(error?.localizedDescription)
         } else {
+            self.delegate?.artistAdded()
             self.navigationController.popViewControllerAnimated(true)
         }
     }

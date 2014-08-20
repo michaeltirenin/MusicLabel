@@ -9,12 +9,17 @@
 import UIKit
 import CoreData
 
+protocol AddSongDelegate {
+    func songAdded()
+}
+
 class AddSongViewController: UIViewController, UITextFieldDelegate {
 
     var selectedArtist : Artist?
-    var songs = [Song]()
     
     @IBOutlet weak var songTitleTextField: UITextField!
+    
+    var delegate : AddSongDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +31,7 @@ class AddSongViewController: UIViewController, UITextFieldDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    override func viewDidDisappear(animated: Bool) {
-    }
-    
+        
     @IBAction func saveSongButton(sender: UIBarButtonItem) {
         
         var artistContext = self.selectedArtist?.managedObjectContext
@@ -43,6 +45,7 @@ class AddSongViewController: UIViewController, UITextFieldDelegate {
         if error != nil {
             println(error?.localizedDescription)
         } else {
+            self.delegate?.songAdded()
             self.navigationController.popViewControllerAnimated(true)
         }
     }
