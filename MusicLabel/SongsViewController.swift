@@ -11,8 +11,8 @@ import CoreData
 
 class SongsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var context : NSManagedObjectContext!
     var songs = [Song]()
+    var selectedArtist : Artist?
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,6 +21,12 @@ class SongsViewController: UIViewController, UITableViewDataSource, UITableViewD
 
         self.navigationItem.title = "Songs"
 
+        // tableview
+        self.songs = self.selectedArtist!.songs.allObjects as [Song]
+        self.tableView.reloadData()
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,9 +54,8 @@ class SongsViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
         if segue.identifier == "ToAddSong" {
-            let addLabelVC = segue.destinationViewController as AddSongViewController
-            //            addLabelVC.delegate = self
+            let addSongVC = segue.destinationViewController as AddSongViewController
+            addSongVC.selectedArtist = selectedArtist
         }
     }
-
 }

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LabelsViewController.swift
 //  MusicLabel
 //
 //  Created by Michael Tirenin on 8/19/14.
@@ -65,7 +65,7 @@ class LabelsViewController: UIViewController, UITableViewDataSource, UITableView
             addLabelVC.delegate = self
         } else if segue.identifier == "ToArtists" {
             let artistsVC = segue.destinationViewController as ArtistsViewController
-//            artistsVC.sele
+            artistsVC.selectedLabel = self.labels[self.tableView.indexPathForSelectedRow().row]
         }
     }
     

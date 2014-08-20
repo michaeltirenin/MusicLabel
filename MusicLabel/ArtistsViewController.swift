@@ -11,8 +11,8 @@ import CoreData
 
 class ArtistsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var context : NSManagedObjectContext!
     var artists = [Artist]()
+    var selectedLabel : Label?
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,6 +20,9 @@ class ArtistsViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
 
         self.navigationItem.title = "Recording Artists"
+        
+        self.artists = self.selectedLabel!.artists.allObjects as [Artist]
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,11 +51,12 @@ class ArtistsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
         if segue.identifier == "ToAddArtist" {
-            let addLabelVC = segue.destinationViewController as AddArtistViewController
-            //            addLabelVC.delegate = self
+            let addArtistVC = segue.destinationViewController as AddArtistViewController
+            addArtistVC.selectedLabel = selectedLabel
         } else if segue.identifier == "ToSongs" {
             let artistsVC = segue.destinationViewController as SongsViewController
+            artistsVC.selectedArtist = self.artists[self.tableView.indexPathForSelectedRow().row]
+
         }
     }
-
 }

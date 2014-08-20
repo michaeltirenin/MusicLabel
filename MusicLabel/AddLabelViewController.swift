@@ -13,7 +13,7 @@ protocol AddLabelDelegate {
     func labelAdded()
 }
 
-class AddLabelViewController: UIViewController {
+class AddLabelViewController: UIViewController, UITextFieldDelegate {
 
     var context : NSManagedObjectContext!
 
@@ -25,6 +25,7 @@ class AddLabelViewController: UIViewController {
         super.viewDidLoad()
 
         self.navigationItem.title = "Add Music Label"
+        labelNameTextField.delegate = self
         
         var appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         self.context = appDelegate.managedObjectContext
@@ -50,4 +51,19 @@ class AddLabelViewController: UIViewController {
             self.navigationController.popToRootViewControllerAnimated(true)
         }
     }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        labelNameTextField.resignFirstResponder()
+        return true
+    }
+    
+    // resigns keyboard if any touch happens in white space
+    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
+        for control in self.view.subviews {
+            if let theControl = control as? UITextField {
+                theControl.resignFirstResponder()
+            }
+        }
+    }
+
 }

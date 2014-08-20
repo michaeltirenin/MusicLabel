@@ -27,6 +27,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uyh-NY-v2V" id="1M8-S4-gbw">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="h7R-Vo-08t" kind="show" identifier="ToArtists" id="90L-at-yJe"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -47,13 +50,12 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="KM2-gG-mRZ">
                             <connections>
                                 <action selector="addLabelButton:" destination="BYZ-38-t0r" id="uU8-we-95e"/>
-                                <segue destination="Pzl-fQ-hjz" kind="show" identifier="ToAddLabel" id="BgW-hV-IQp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="oV8-5z-Dya" id="qYf-zw-FRm"/>
-                        <segue destination="h7R-Vo-08t" kind="show" identifier="ToArtists" id="zFo-Jv-buX"/>
+                        <segue destination="Pzl-fQ-hjz" kind="show" identifier="ToAddLabel" id="5pi-lF-e09"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -127,6 +129,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8hb-WQ-A0x" id="Le9-rg-8ua">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="f2D-NT-13H" kind="show" identifier="ToSongs" id="Sxo-7M-laD"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -148,13 +153,12 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Htc-Lc-crN">
                             <connections>
                                 <action selector="addArtistButton:" destination="h7R-Vo-08t" id="raB-HS-NQe"/>
-                                <segue destination="yON-tf-8UP" kind="show" identifier="ToAddArtist" id="Wrb-ZE-bDq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="oPV-zR-6G9" id="NgL-Ce-Jrk"/>
-                        <segue destination="f2D-NT-13H" kind="show" identifier="ToSongs" id="rDT-tF-iWC"/>
+                        <segue destination="yON-tf-8UP" kind="show" identifier="ToAddArtist" id="Hsp-Nt-VWY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOm-ef-cTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -234,7 +238,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SongCell" id="T7B-YK-nwb">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" id="T7B-YK-nwb">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T7B-YK-nwb" id="fw6-Am-Piu">
