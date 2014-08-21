@@ -94,16 +94,10 @@
 		F28CE15F19A3F6C4000C717F /* MusicLabel */ = {
 			isa = PBXGroup;
 			children = (
+				F28CE16219A3F6C4000C717F /* AppDelegate.swift */,
 				F28CE18919A3FBB6000C717F /* Models */,
 				F28CE18A19A3FBBC000C717F /* Views */,
 				F28CE18B19A3FBC2000C717F /* Controllers */,
-				F28CE16219A3F6C4000C717F /* AppDelegate.swift */,
-				F28CE16719A3F6C4000C717F /* LabelsViewController.swift */,
-				F2A9EF8619A3FCFE009736C0 /* AddLabelViewController.swift */,
-				F2A9EF8819A3FD0C009736C0 /* ArtistsViewController.swift */,
-				F2A9EF8A19A3FD1F009736C0 /* AddArtistViewController.swift */,
-				F2A9EF8C19A40811009736C0 /* SongsViewController.swift */,
-				F2A9EF8E19A40823009736C0 /* AddSongViewController.swift */,
 				F28CE16C19A3F6C4000C717F /* Images.xcassets */,
 				F28CE16419A3F6C4000C717F /* MusicLabel.xcdatamodeld */,
 				F28CE16019A3F6C4000C717F /* Supporting Files */,
@@ -158,6 +152,12 @@
 		F28CE18B19A3FBC2000C717F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F28CE16719A3F6C4000C717F /* LabelsViewController.swift */,
+				F2A9EF8619A3FCFE009736C0 /* AddLabelViewController.swift */,
+				F2A9EF8819A3FD0C009736C0 /* ArtistsViewController.swift */,
+				F2A9EF8A19A3FD1F009736C0 /* AddArtistViewController.swift */,
+				F2A9EF8C19A40811009736C0 /* SongsViewController.swift */,
+				F2A9EF8E19A40823009736C0 /* AddSongViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";

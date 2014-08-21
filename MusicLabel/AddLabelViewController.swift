@@ -9,9 +9,9 @@
 import UIKit
 import CoreData
 
-protocol AddLabelDelegate {
-    func labelAdded()
-}
+//protocol AddLabelDelegate {
+//    func labelAdded()
+//}
 
 class AddLabelViewController: UIViewController, UITextFieldDelegate {
 
@@ -19,7 +19,7 @@ class AddLabelViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var labelNameTextField: UITextField!
     
-    var delegate : AddLabelDelegate?
+//    var delegate : AddLabelDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,6 @@ class AddLabelViewController: UIViewController, UITextFieldDelegate {
         
         var appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         self.context = appDelegate.managedObjectContext
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,14 +45,16 @@ class AddLabelViewController: UIViewController, UITextFieldDelegate {
         self.context.save(&error)
         if error != nil {
             println(error?.localizedDescription)
-        } else {
-            self.delegate?.labelAdded()
-            self.navigationController.popToRootViewControllerAnimated(true)
         }
+//        } else {
+//            self.delegate?.labelAdded()
+//            self.navigationController.popToRootViewControllerAnimated(true)
+//        }
+        self.navigationController.popToRootViewControllerAnimated(true)
     }
     
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
-        labelNameTextField.resignFirstResponder()
+        textField.resignFirstResponder()
         return true
     }
     

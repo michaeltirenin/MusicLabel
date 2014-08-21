@@ -54,8 +54,7 @@ class AddArtistViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
-        firstNameTextField.resignFirstResponder()
-        lastNameTextField.resignFirstResponder()
+        textField.resignFirstResponder()
         return true
     }
     

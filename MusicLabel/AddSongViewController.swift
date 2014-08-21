@@ -51,7 +51,7 @@ class AddSongViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
-        songTitleTextField.resignFirstResponder()
+        textField.resignFirstResponder()
         return true
     }
     
